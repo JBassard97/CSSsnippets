@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+/* background of page */
+body {
+    background: rgb(28, 48, 48);
+}
+
+/* Header */
+.page-title {
+    text-align: center;
+    padding: 12px;
+    margin: 12px;
+}
+/* establishes font and color of main and card headers */
+.page-title,
+.card-header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(205, 133, 205);
+}
+
+/* White text below header */
+header p {
+    color: whitesmoke;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+.row.justify-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Each card encapsulated by dashed white border */
+.card-column {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: whitesmoke;
+    flex: 0 0 300px;
+    margin-bottom: 2rem;
+}
+
+.card.code-card{
+
+}
+
+/* header of each card, and solid white border*/
+.card-header {
+    position: relative;
+    left: 12px;
+    bottom: 14px;
+    font-size: 1.3rem;
+    border: 2px solid whitesmoke;
+    border-radius: 0.5rem;
+    max-width: max-content;
+    padding-left: 10px;
+    background: rgb(28, 48, 48);
+    z-index: 1;
+    padding-right: 30px;
+
+}
+
+/* starts flickering animation when hovering over card headers */
+.card-header:hover {
+    animation: flicker 1.5s infinite alternate;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 50px red,
+        0 0 100px red;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        box-shadow:
+            0 0 5px #fff,
+            0 0 15px #fff,
+            0 0 25px red,
+            0 0 35px red,
+            0 0 45px red,
+            0 0 50px red;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
+    }
+}
+.card-column:hover {
+    box-shadow: inset
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 50px aqua,
+        0 0 100px aqua;
+        
+}
+
+/* purple description text in each card */
+.card-body {
+    color: rgb(205, 133, 205);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
+/* white blocks of code */
+.code-block {
+    color: whitesmoke;
+    background: linear-gradient(to bottom, mediumorchid, rgb(205, 133, 205));
+    font-family: monospace;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 11rem;
+    cursor: copy;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+/* footer */
+footer h3 {
+    text-align: center;
+    color: rgb(205, 133, 205);
+    padding-top: 1rem;
+}
+
+#enjoymentLabel {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+#enjoyment {
+    appearance: menu;
+    font-size: 2rem;
+}
+
+#opt1 {
+    background-color: aqua;
+}
+
